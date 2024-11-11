@@ -1,7 +1,3 @@
-import os
-os.system("pip install splitticapi")
-os.system("pip install discord")
-os.system("pip install asyncio")
 from SplitticAPI.meowgpt import ChatModule
 import discord
 import config
@@ -24,10 +20,11 @@ class Client(discord.Client):
             await self.change_presence(activity=new_activity)
             await asyncio.sleep(10)
 
-client = Client()
-ChatModule.initialize(config.api_key)
-prompt = open('prompt.txt', 'r').read()
 chats = {}
+prompt = open('prompt.txt', 'r').read()
+
+ChatModule.initialize(config.api_key)
+client = Client()
 
 @client.event
 async def on_ready():

@@ -18,6 +18,34 @@ This guide will help you set up your own MeowGPT Discord bot using the provided 
 
 6. **Free Hosting**: Visit [splittic.app](https://splittic.app) for free hosting. Follow their instructions to set up your bot hosting.
 
+### Environment Setup
+
+1. **Create a Virtual Environment**: It's recommended to use a virtual environment to manage dependencies. Run the following command to create one:
+
+    ```bash
+    python -m venv venv
+    ```
+
+2. **Activate the Virtual Environment**: Activate the virtual environment using the command below:
+
+    - On Windows:
+
+        ```bash
+        .env\Scriptsctivate
+        ```
+
+    - On macOS and Linux:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+3. **Install Dependencies**: Install the required packages using the `requirements.txt` file. Run:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
 ### Configuration
 
 1. Open the `config.py` file and update the following variables:
@@ -26,11 +54,41 @@ This guide will help you set up your own MeowGPT Discord bot using the provided 
     - `activity`: Customize the activity message as desired. Use `{s}` for the server count and `{u}` for the user count.
     - `channel_ids`: Add the Channel IDs of the Discord channels where you want the bot to respond.
 
+4. **Configure the Bot**: Open the `example_config.py` file and update the following variables:
+
+    - `api_key`: Replace `"YOUR_API_KEY"` with your SplitticAPI key.
+    - `token`: Replace `"YOUR_DISCORD_BOT_TOKEN"` with the Discord bot token you obtained.
+    - `activity`: Customize the activity message as desired. Use `{s}` for the server count and `{u}` for the user count.
+    - `channel_ids`: Add the Channel IDs of the Discord channels where you want the bot to respond.
+
+5. **Rename the Configuration File**: After updating, rename `example_config.py` to `config.py` to ensure the bot can access your configuration.
+
+### Web UI Setup
+
+To interact with MeowGPT through a web interface, follow these steps:
+
+1. **Install Flask**: Ensure Flask is installed in your environment. If not, you can install it using pip:
+
+    ```bash
+    pip install Flask
+    ```
+
+2. **Run the Flask Server**: Execute the `web_ui.py` script to start the web server. Use the following command:
+
+    ```bash
+    python web_ui.py
+    ```
+
+3. **Access the Web Interface**: Open your web browser and go to `http://127.0.0.1:5000/` to interact with the MeowGPT bot through the web interface.
+
 ### Bot Initialization
 
 1. Save your text prompt (if any) in a file named `prompt.txt`. If you don't have a prompt, you can leave the file empty.
 
-2. Run the `bot.py` script to initialize your bot.
+2. **Run the Bot**: Execute the `bot.py` script to start your bot. Use the following command:
+
+    ```bash
+    python bot.py
 
     ```bash
     python bot.py
@@ -59,3 +117,4 @@ Visit [splittic.app](https://splittic.app) to take advantage of free hosting for
 If you encounter issues during the setup, check the console for error messages and ensure that you have followed all the steps correctly. If problems persist, refer to the documentation of the libraries used in the code (Discord.py and SplitticAPI) for additional guidance.
 
 Congratulations! You have successfully set up your MeowGPT Discord bot. Enjoy chatting with your AI-powered companion!
+

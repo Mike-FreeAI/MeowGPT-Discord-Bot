@@ -1,7 +1,8 @@
 from SplitticAPI.meowgpt import ChatModule
+import config
 
 # Set the global API key
-api_key = "sk-a374c38c9d72cc7490868521648d6ac47762b629501574cca0c7f9c803bcfd68"
+api_key = config.api_key
 ChatModule.initialize(api_key)
 
 # Create a ChatModule instance with a unique chat ID
@@ -16,3 +17,4 @@ def main():
 # Run the program
 if __name__ == "__main__":
     main()
+
