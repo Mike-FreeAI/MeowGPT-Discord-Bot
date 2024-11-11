@@ -63,6 +63,24 @@ This guide will help you set up your own MeowGPT Discord bot using the provided 
 
 5. **Rename the Configuration File**: After updating, rename `example_config.py` to `config.py` to ensure the bot can access your configuration.
 
+### Web UI Setup
+
+To interact with MeowGPT through a web interface, follow these steps:
+
+1. **Install Flask**: Ensure Flask is installed in your environment. If not, you can install it using pip:
+
+    ```bash
+    pip install Flask
+    ```
+
+2. **Run the Flask Server**: Execute the `web_ui.py` script to start the web server. Use the following command:
+
+    ```bash
+    python web_ui.py
+    ```
+
+3. **Access the Web Interface**: Open your web browser and go to `http://127.0.0.1:5000/` to interact with the MeowGPT bot through the web interface.
+
 ### Bot Initialization
 
 1. Save your text prompt (if any) in a file named `prompt.txt`. If you don't have a prompt, you can leave the file empty.
