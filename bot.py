@@ -47,4 +47,3 @@ async def on_message(message):
             await message.reply(chunk)
 
 client.run(config.token)
-
